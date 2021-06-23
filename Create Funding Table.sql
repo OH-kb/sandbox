@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[Funding Reconciliation]
     [ResubmittedVolumes] INT NOT NULL,
     [Change] INT NOT NULL,
     [Justification] NVARCHAR(500),
-    [Created] DATE NOT NULL
+    [Created] DATETIME NOT NULL
     -- Specify more columns here
 );
 GO
