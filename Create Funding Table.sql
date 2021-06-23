@@ -1,13 +1,13 @@
--- Create a new table called '[Funding Reconciliation]' in schema '[dbo]'
+-- Create a new table called '[FundingReconciliation]' in schema '[dbo]'
 -- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[Funding Reconciliation]', 'U') IS NOT NULL
-DROP TABLE [dbo].[Funding Reconciliation]
+IF OBJECT_ID('[dbo].[FundingReconciliation]', 'U') IS NOT NULL
+DROP TABLE [dbo].[FundingReconciliation]
 GO
 -- Create the table in the specified schema
-CREATE TABLE [dbo].[Funding Reconciliation]
+CREATE TABLE [dbo].[FundingReconciliation]
 (
     [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
-    [Laboratory] NVARCHAR(150) NOT NULL,
+    [LabId] INT NOT NULL FOREIGN KEY REFERENCES LabTable(LabId),
     [Month] DATE NOT NULL,
     [Service] NVARCHAR(150) NOT NULL,
     [ActualVolumes] INT NOT NULL,
