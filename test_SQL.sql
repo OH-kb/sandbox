@@ -6,3 +6,7 @@
 /* SELECT * FROM dbo.dsajhkdksa
 WHERE dsada
 GO
+
+
+
+This is a detailed commit
